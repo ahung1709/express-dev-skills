@@ -1,11 +1,11 @@
 <%-include('../partials/header') %>
     <h1>Skills</h1>
-    <ul>
+    <ul class="list-group list-group-flush">
         <% skills.forEach(function(t) { %>
-            <li>
-                <a href="/skills/<%= t.id %>"><%= t.skill %></a>
+            <li class="list-group-item list-group-item-primary">
+                <a href="/skills/<%= t.id %>" ><%= t.skill %></a>
                 - 
-                <%= t.done ? 'done' : 'not done' %>
+                <%= t.done ? 'learned' : 'not learned' %>
             </li>
         <% }); %>
     </ul>
