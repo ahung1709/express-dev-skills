@@ -2,7 +2,14 @@
     <h1 class="display-4">Skill #<%= skill.id %></h1>
     <h3 class="display-1 text-primary"><%= skill.skill %></h3>
     <h3 class="display-5">Learned: <%= skill.done ? 'Yes' : 'No' %></h3>
-    <a href="/skills">Back</a>
+    <br>
+    <a href="/skills/edit/<%= skill.id %>" class="btn btn-info">Edit</a><br>
+    <br>
+    <form action="/skills/<%= skill.id %>?_method=DELETE" method="POST">
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+    <br>
+    <a href="/skills" class="btn btn-secondary">Back</a>
 <%include('../partials/footer') %>
 
 

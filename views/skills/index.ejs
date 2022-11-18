@@ -1,12 +1,20 @@
 <%-include('../partials/header') %>
+<main class="index-view">
     <h1>Skills</h1>
     <ul class="list-group list-group-flush">
         <% skills.forEach(function(t) { %>
             <li class="list-group-item list-group-item-primary">
+                <form action="/skills/<%= t.id %>?_method=DELETE" method="POST" class="delete-form">
+                    <button type="submit">X</button>
+                </form>
+                <%= t.id %>
                 <a href="/skills/<%= t.id %>" ><%= t.skill %></a>
                 - 
                 <%= t.done ? 'learned' : 'not learned' %>
             </li>
         <% }); %>
     </ul>
+    <br>
+    <a href="/skills/new" class="btn btn-primary">Add skill</a>
+</main>
 <%include('../partials/footer') %>

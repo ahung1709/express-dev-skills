@@ -1,0 +1,17 @@
+<%-include('../partials/header') %>
+<div class="container-fluid ">
+<h1>Edit Skill</h1>
+<form action="/skills/edit/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
+    <h5 class="display-5">Skill# <input type="text" name="id" value="<%= skill.id %>"></h5>
+    <h5 class="display-5">Skill <input type="text" name="skill" value="<%= skill.skill %>"></h5>
+    <h5 class="display-5">
+        <input type="checkbox" name="done" <%= skill.done ? 'checked': '' %>> Learned
+    </h5>
+    <button type="submit" class="btn btn-success">Edit Skill</button>
+</form>
+<br>
+<a href="/skills" class="btn btn-secondary">Back</a>
+</div>
+<%include('../partials/footer') %>
+
+

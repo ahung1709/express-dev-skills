@@ -7,3 +7,17 @@ body {
 a {
   color: #00B7FF;
 }
+
+.delete-form, .edit-form {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.delete-form button, .edit-form button {
+  color: red;
+}
+
+li {
+  list-style: none;
+}
+
