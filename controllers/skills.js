@@ -41,6 +41,7 @@ function editSkill(req, res) {
 }
 
 function updateSkill(req, res) {
+    
     skillsDB.updateOne(req.params.id, req.body)
     res.redirect('/skills/'+req.body.id)
 }
